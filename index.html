@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="src/jquery.diagonal.js"></script>
+
+</head>
+<body>
+    <script>
+    $(function (){
+
+        // 1. 先取得目標的斜線角度
+        var deg = $.diagonal.deg(".box");
+
+
+        // 2. 綁定對象
+        $(".box").diagonal({
+            deg: deg,
+            color: 'deeppink',
+            isrwd: true
+        });
+
+    })
+    </script>
+    
+    <style>
+        .box{
+            position:relative;
+            margin:50px auto;
+            width:100px;
+            height:300px;
+            box-sizing:border-box;
+            border:1px solid #333;  
+        }
+    </style>
+
+    <div class="box"></div>
+</body>
+</html>
